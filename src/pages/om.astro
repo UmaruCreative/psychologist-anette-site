@@ -1,0 +1,323 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Møt Anette - Dr. Anette Larsen" description="Lær mer om Dr. Anette Larsen, autorisert psykolog med erfaring innen terapi for voksne, studenter og par.">
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h1 class="fade-in">Møt Anette</h1>
+          <p class="intro-text fade-in">
+            Jeg heter Anette. Jeg er psykolog — og jobber med mennesker som ønsker å forstå seg selv litt bedre, bearbeide det som er vondt, eller finne nye veier i livet.
+          </p>
+          <p class="fade-in">
+            For meg er terapi først og fremst et møte mellom mennesker. Jeg lytter, stiller spørsmål, og sammen utforsker vi det du ønsker å jobbe med.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="/images/Psychologist.png" alt="Portrett av Dr. Anette Larsen" class="fade-in" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="credentials">
+    <div class="container">
+      <h2 class="fade-in">Bakgrunn og erfaring</h2>
+      <div class="credentials-grid">
+        <div class="credential-card fade-in">
+          <h3>Autorisert psykolog</h3>
+          <p>Autorisasjon fra Helsedirektoratet som klinisk psykolog med spesialisering i voksenpsykologi og parterapi.</p>
+        </div>
+        <div class="credential-card fade-in">
+          <h3>Samtaler på norsk og engelsk</h3>
+          <p>Flerspråklig praksis som gjør terapien tilgjengelig for både norsktalende og engelsktalende klienter.</p>
+        </div>
+        <div class="credential-card fade-in">
+          <h3>Erfaring med voksne, studenter og par</h3>
+          <p>Bred erfaring innen individualterapi, parterapi og spesialisert støtte for studenter i overgangsfaser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="philosophy">
+    <div class="container">
+      <div class="philosophy-content">
+        <h2 class="fade-in">Min filosofi</h2>
+        <div class="philosophy-text">
+          <p class="fade-in">
+            Jeg tror på at hver person har i seg det de trenger for å finne sin vei videre. Min rolle er å skape et trygt rom hvor du kan utforske, forstå og vokse.
+          </p>
+          <p class="fade-in">
+            Terapi handler ikke om å "fikse" noe som er ødelagt. Det handler om å møte deg der du er, lytte til din historie, og sammen finne veier som fungerer for deg.
+          </p>
+          <p class="fade-in">
+            Jeg jobber ut fra en grunnleggende respekt for at du er eksperten på ditt eget liv. Min oppgave er å følge deg på reisen, stille gode spørsmål og tilby perspektiver som kan være til hjelp.
+          </p>
+        </div>
+        <div class="philosophy-image">
+          <img src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg" alt="Rolig skog med sollys" class="fade-in" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="personal">
+    <div class="container">
+      <h2 class="fade-in">Litt mer personlig</h2>
+      <div class="personal-content">
+        <p class="fade-in">
+          Jeg er 47 år og har jobbet som psykolog i over 15 år. Jeg driver egen praksis i Oslo sentrum, hvor jeg møter mennesker fra alle samfunnslag og livsfaser.
+        </p>
+        <p class="fade-in">
+          Utenom jobben liker jeg å tilbringe tid i naturen, lese gode bøker og dyrke stillhet. Jeg tror disse interessene påvirker hvordan jeg jobber — med et fokus på ro, refleksjon og det som virkelig betyr noe.
+        </p>
+        <p class="fade-in">
+          Det som driver meg i arbeidet er å se mennesker finne tilbake til seg selv og oppleve at livet kan bli lettere å leve.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="fade-in">Klar for en samtale?</h2>
+        <p class="fade-in">
+          Du trenger ikke vite akkurat hva du vil si. Send noen linjer — eller bestill en time direkte.
+        </p>
+        <div class="cta-buttons fade-in">
+          <a href="/kontakt" class="btn btn-primary">Ta kontakt</a>
+          <a href="/terapi" class="btn btn-secondary">Les om terapi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-hero {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(135deg, rgba(227, 236, 241, 0.3) 0%, rgba(146, 173, 67, 0.1) 100%);
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .about-text h1 {
+    margin-bottom: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--deep-spruce);
+    margin-bottom: 2rem;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .credentials {
+    padding: 6rem 0;
+  }
+
+  .credentials h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .credential-card {
+    background: var(--pale-blue);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .credential-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .credential-card h3 {
+    color: var(--deep-spruce);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .philosophy {
+    padding: 6rem 0;
+    background: var(--white);
+  }
+
+  .philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .philosophy h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .philosophy-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .philosophy-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .personal {
+    padding: 6rem 0;
+    background: var(--pale-blue);
+  }
+
+  .personal h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .personal-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .personal-content p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .contact-cta {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--moss-green) 0%, var(--deep-spruce) 100%);
+    color: var(--white);
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    color: var(--white);
+    margin-bottom: 2rem;
+  }
+
+  .cta-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-buttons .btn-primary {
+    background: var(--white);
+    color: var(--deep-spruce);
+  }
+
+  .cta-buttons .btn-primary:hover {
+    background: var(--pale-blue);
+    transform: translateY(-2px);
+  }
+
+  .cta-buttons .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: var(--white);
+  }
+
+  .cta-buttons .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+  }
+
+  @media (max-width: 768px) {
+    .about-hero {
+      padding: 6rem 0 3rem;
+    }
+
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
+    }
+
+    .about-image {
+      order: -1;
+    }
+
+    .about-image img {
+      height: 300px;
+    }
+
+    .philosophy-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .philosophy-image img {
+      height: 250px;
+    }
+
+    .credentials, .philosophy, .personal, .contact-cta {
+      padding: 4rem 0;
+    }
+
+    .credentials-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-buttons .btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .credential-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .intro-text {
+      font-size: 1.2rem;
+    }
+  }
+</style>

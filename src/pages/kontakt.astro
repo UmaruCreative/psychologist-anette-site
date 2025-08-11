@@ -1,0 +1,819 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Ta kontakt - Dr. Anette Larsen" description="Bestill time eller send forespørsel til Dr. Anette Larsen. Trygg og konfidensiell kontakt for terapiavtaler.">
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Ta kontakt</h1>
+      <p class="hero-subtitle">
+        Du trenger ikke vite akkurat hva du vil si. Send noen linjer — eller bestill en time direkte.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Kom i kontakt</h2>
+          <p>
+            Jeg forstår at det kan kjennes stort å ta kontakt første gang. Du bestemmer selv hvor mye du ønsker å dele i første omgang.
+          </p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <h3>E-post</h3>
+              <p>post@anettelarsen.no<br>
+              <small>Jeg svarer vanligvis innen 24 timer på arbeidsdager</small></p>
+            </div>
+            
+            <div class="contact-method">
+              <h3>Telefon</h3>
+              <p>+47 123 45 678<br>
+              <small>Mandag-fredag 09:00-16:00</small></p>
+            </div>
+            
+            <div class="contact-method">
+              <h3>Adresse</h3>
+              <p>Psykologpraksis<br>
+              Karl Johans gate 20<br>
+              0159 Oslo</p>
+            </div>
+          </div>
+
+          <div class="privacy-note">
+            <h3>Personvern og sikkerhet</h3>
+            <p>All informasjon behandles konfidensielt og i tråd med GDPR. Jeg har taushetsplikt og sikrer at dine opplysninger håndteres trygt.</p>
+          </div>
+        </div>
+
+        <div class="contact-forms">
+          <div class="form-tabs">
+            <button class="tab-btn active" data-tab="inquiry">Forespørsel</button>
+            <button class="tab-btn" data-tab="booking">Direkte bestilling</button>
+          </div>
+
+          <form class="contact-form active" id="inquiry-form">
+            <h3>Send forespørsel</h3>
+            <p class="form-subtitle">Du kan være anonym hvis du ønsker det.</p>
+            
+            <div class="form-group">
+              <label for="name">Navn (valgfritt)</label>
+              <input type="text" id="name" name="name" placeholder="Du kan skrive fornavn eller være anonym">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">E-post *</label>
+              <input type="email" id="email" name="email" required placeholder="din@epost.no">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Telefon (valgfritt)</label>
+              <input type="tel" id="phone" name="phone" placeholder="Hvis du foretrekker å bli ringt opp">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Hva tenker du på?</label>
+              <textarea id="message" name="message" rows="5" placeholder="Skriv noen linjer om situasjonen din, eller bare at du lurer på om terapi kan være noe for deg..."></textarea>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" required>
+                <span class="checkmark"></span>
+                Jeg samtykker til at informasjonen behandles konfidensielt
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Send forespørsel</button>
+          </form>
+
+          <form class="contact-form" id="booking-form">
+            <h3>Bestill time direkte</h3>
+            <p class="form-subtitle">For deg som vet at du ønsker å starte med terapi.</p>
+            
+            <div class="form-group">
+              <label for="booking-date">Velg dato *</label>
+              <input type="date" id="booking-date" name="booking-date" required>
+            </div>
+            
+            <div class="form-group" id="time-slots-group" style="display: none;">
+              <label>Velg tidspunkt *</label>
+              <div class="time-slots">
+                <div class="time-period">
+                  <h4>Formiddag</h4>
+                  <div class="slots">
+                    <label class="time-slot">
+                      <input type="radio" name="time-slot" value="09:00-10:00">
+                      <span>09:00-10:00</span>
+                    </label>
+                    <label class="time-slot">
+                      <input type="radio" name="time-slot" value="10:00-11:00">
+                      <span>10:00-11:00</span>
+                    </label>
+                    <label class="time-slot">
+                      <input type="radio" name="time-slot" value="11:00-12:00">
+                      <span>11:00-12:00</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="time-period">
+                  <h4>Ettermiddag</h4>
+                  <div class="slots">
+                    <label class="time-slot">
+                      <input type="radio" name="time-slot" value="13:00-14:00">
+                      <span>13:00-14:00</span>
+                    </label>
+                    <label class="time-slot">
+                      <input type="radio" name="time-slot" value="14:00-15:00">
+                      <span>14:00-15:00</span>
+                    </label>
+                    <label class="time-slot">
+                      <input type="radio" name="time-slot" value="15:00-16:00">
+                      <span>15:00-16:00</span>
+                    </label>
+                    <label class="time-slot">
+                      <input type="radio" name="time-slot" value="16:00-17:00">
+                      <span>16:00-17:00</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="time-period">
+                  <h4>Kveld</h4>
+                  <div class="slots">
+                    <label class="time-slot evening">
+                      <input type="radio" name="time-slot" value="17:00-18:00">
+                      <span>17:00-18:00</span>
+                    </label>
+                    <label class="time-slot evening">
+                      <input type="radio" name="time-slot" value="18:00-19:00">
+                      <span>18:00-19:00</span>
+                    </label>
+                    <label class="time-slot evening">
+                      <input type="radio" name="time-slot" value="19:00-20:00">
+                      <span>19:00-20:00</span>
+                    </label>
+                    <label class="time-slot evening">
+                      <input type="radio" name="time-slot" value="20:00-21:00">
+                      <span>20:00-21:00</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <p class="evening-note">Kveldstakst gjelder etter kl. 17.</p>
+            </div>
+            
+            <div class="form-group">
+              <label for="full-name">Fullt navn *</label>
+              <input type="text" id="full-name" name="full-name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="booking-email">E-post *</label>
+              <input type="email" id="booking-email" name="booking-email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="booking-phone">Telefon *</label>
+              <input type="tel" id="booking-phone" name="booking-phone" required>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="therapy-type">Type terapi</label>
+                <select id="therapy-type" name="therapy-type" required>
+                  <option value="">Velg type</option>
+                  <option value="individual">Individuell terapi</option>
+                  <option value="couple">Parterapi</option>
+                  <option value="student">Studentoppfølging</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="language">Språk</label>
+                <select id="language" name="language" required>
+                  <option value="">Velg språk</option>
+                  <option value="norwegian">Norsk</option>
+                  <option value="english">Engelsk</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="preferred-time">Foretrukket tidspunkt</label>
+                <select id="preferred-time" name="preferred-time">
+                  <option value="">Velg tidspunkt</option>
+                  <option value="morning">Formiddag (09:00-12:00)</option>
+                  <option value="afternoon">Ettermiddag (12:00-16:00)</option>
+                  <option value="evening">Kveld (16:00-19:00)</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="format">Format</label>
+                <select id="format" name="format" required>
+                  <option value="">Velg format</option>
+                  <option value="office">På kontoret</option>
+                  <option value="digital">Digitalt</option>
+                  <option value="flexible">Fleksibelt</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="booking-message">Tilleggsinformasjon (valgfritt)</label>
+              <textarea id="booking-message" name="booking-message" rows="3" placeholder="Evt. spesifikke behov eller informasjon du ønsker å dele..."></textarea>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" required>
+                <span class="checkmark"></span>
+                Jeg samtykker til at informasjonen behandles konfidensielt
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Bestill time</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-info">
+    <div class="container">
+      <h2>Priser og praktisk informasjon</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Priser</h3>
+          <div class="price-item">
+            <span>50 min individuell sesjon:</span>
+            <strong>1.200 NOK</strong>
+          </div>
+          <div class="price-item">
+            <span>50 min parsesjon:</span>
+            <strong>1.400 NOK</strong>
+          </div>
+          <div class="price-item">
+            <span>Helger og kvelder:</span>
+            <strong>1.650 NOK</strong>
+          </div>
+          <p class="price-note">Første konsultasjon har samme pris som ordinære sesjoner.</p>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Avbestilling</h3>
+          <p>Avbestill senest 24 timer før avtalt tid for å unngå full pris.</p>
+          <p>Ved sykdom aksepterer jeg avbestilling på kortere varsel med legeerklæring.</p>
+          <p>Jeg forstår at livet kan være uforutsigbart - ta kontakt om det oppstår noe.</p>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Forsikring og refusjon</h3>
+          <p>Som autorisert psykolog kan du søke om refusjon via fastlegen din.</p>
+          <p>Private helseforsikringer dekker ofte psykologbehandling - sjekk med ditt forsikringsselskap.</p>
+          <p>Jeg hjelper gjerne med dokumentasjon som trengs for refusjon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="location">
+    <div class="container">
+      <div class="location-content">
+        <div class="location-text">
+          <h2>Hvor vi møtes</h2>
+          <h3>Kontoret i Oslo sentrum</h3>
+          <p>Kontoret ligger sentralt i Oslo, lett tilgjengelig med kollektivtransport. Det er et rolig og trygt rom hvor vi kan snakke uforstyrret.</p>
+          
+          <h3>Digitale samtaler</h3>
+          <p>Vi kan også møtes digitalt via sikker videoløsning. Dette fungerer like godt som fysiske møter for de fleste typer terapi.</p>
+          
+          <div class="location-details">
+            <p><strong>Adresse:</strong> Karl Johans gate 20, 0159 Oslo</p>
+            <p><strong>T-bane/buss:</strong> Stortinget (2 min gange)</p>
+            <p><strong>Parkering:</strong> Begrenset gateparkering, anbefaler kollektivt</p>
+          </div>
+        </div>
+        <div class="location-image">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Rolig kontorområde med naturlig lys" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .contact-hero {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(135deg, rgba(0, 66, 37, 0.05) 0%, rgba(146, 173, 67, 0.1) 100%);
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--woodland-gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .contact-main {
+    padding: 6rem 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-info h2 {
+    margin-bottom: 2rem;
+  }
+
+  .contact-info > p {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+
+  .contact-methods {
+    margin-bottom: 3rem;
+  }
+
+  .contact-method {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: var(--pale-blue);
+    border-radius: 15px;
+  }
+
+  .contact-method h3 {
+    color: var(--deep-spruce);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-method p {
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  .contact-method small {
+    color: var(--woodland-gray);
+    font-size: 0.9rem;
+  }
+
+  .privacy-note {
+    background: rgba(146, 173, 67, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 4px solid var(--moss-green);
+  }
+
+  .privacy-note h3 {
+    color: var(--deep-spruce);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .privacy-note p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .form-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--pale-blue);
+  }
+
+  .tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--woodland-gray);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .tab-btn.active {
+    color: var(--deep-spruce);
+    border-bottom-color: var(--moss-green);
+  }
+
+  .contact-form {
+    display: none;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-form.active {
+    display: block;
+  }
+
+  .contact-form h3 {
+    color: var(--deep-spruce);
+    margin-bottom: 1rem;
+  }
+
+  .form-subtitle {
+    color: var(--woodland-gray);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--trunk-brown);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--pale-blue);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+    background: var(--white);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--moss-green);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    display: none;
+  }
+
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--woodland-gray);
+    border-radius: 4px;
+    margin-right: 0.8rem;
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background: var(--moss-green);
+    border-color: var(--moss-green);
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    color: var(--white);
+    font-size: 14px;
+    top: -2px;
+    left: 3px;
+  }
+
+  .time-slots {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .time-period h4 {
+    color: var(--deep-spruce);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .time-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    border: 2px solid var(--pale-blue);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--white);
+    font-size: 0.9rem;
+  }
+
+  .time-slot:hover {
+    border-color: var(--moss-green);
+    background: rgba(146, 173, 67, 0.1);
+  }
+
+  .time-slot input[type="radio"] {
+    display: none;
+  }
+
+  .time-slot input[type="radio"]:checked + span {
+    font-weight: 600;
+  }
+
+  .time-slot:has(input[type="radio"]:checked) {
+    border-color: var(--moss-green);
+    background: var(--moss-green);
+    color: var(--white);
+  }
+
+  .time-slot.evening {
+    border-color: var(--woodland-gray);
+  }
+
+  .time-slot.evening:hover {
+    border-color: var(--deep-spruce);
+    background: rgba(0, 66, 37, 0.1);
+  }
+
+  .time-slot.evening:has(input[type="radio"]:checked) {
+    border-color: var(--deep-spruce);
+    background: var(--deep-spruce);
+  }
+
+  .evening-note {
+    font-size: 0.9rem;
+    color: var(--woodland-gray);
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .pricing-info {
+    padding: 6rem 0;
+    background: var(--pale-blue);
+  }
+
+  .pricing-info h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .pricing-card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .pricing-card h3 {
+    color: var(--deep-spruce);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--pale-blue);
+  }
+
+  .price-item:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+
+  .price-item strong {
+    color: var(--moss-green);
+    font-size: 1.1rem;
+  }
+
+  .price-note {
+    font-size: 0.9rem;
+    color: var(--woodland-gray);
+    margin-bottom: 0;
+  }
+
+  .location {
+    padding: 6rem 0;
+  }
+
+  .location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .location-text h2 {
+    margin-bottom: 3rem;
+  }
+
+  .location-text h3 {
+    color: var(--deep-spruce);
+    margin: 2rem 0 1rem;
+    font-size: 1.3rem;
+  }
+
+  .location-text h3:first-of-type {
+    margin-top: 0;
+  }
+
+  .location-details {
+    background: var(--pale-blue);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+  }
+
+  .location-details p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .location-details p:last-child {
+    margin-bottom: 0;
+  }
+
+  .location-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .contact-hero {
+      padding: 6rem 0 3rem;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-forms {
+      order: -1;
+    }
+
+    .contact-form {
+      padding: 2rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .tab-btn {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .location-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .location-image {
+      order: -1;
+    }
+
+    .location-image img {
+      height: 250px;
+    }
+
+    .contact-main, .pricing-info, .location {
+      padding: 4rem 0;
+    }
+
+    .slots {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-form {
+      padding: 1.5rem;
+    }
+
+    .pricing-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .contact-method {
+      padding: 1rem;
+    }
+
+    .privacy-note {
+      padding: 1.5rem;
+    }
+
+    .slots {
+      grid-template-columns: 1fr;
+    }
+
+    .time-slot {
+      padding: 1rem;
+    }
+  }
+</style>
+
+<script>
+  // Tab functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const forms = document.querySelectorAll('.contact-form');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const targetTab = this.getAttribute('data-tab');
+        
+        // Remove active class from all tabs and forms
+        tabBtns.forEach(b => b.classList.remove('active'));
+        forms.forEach(f => f.classList.remove('active'));
+        
+        // Add active class to clicked tab and corresponding form
+        this.classList.add('active');
+        document.getElementById(`${targetTab}-form`).classList.add('active');
+      });
+    });
+
+    // Form submissions
+    document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Takk for din forespørsel! Jeg vil ta kontakt med deg innen 24 timer.');
+    });
+
+    document.getElementById('booking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Takk for din bestilling! Jeg vil kontakte deg for å bekrefte tidspunkt.');
+    });
+
+    // Show time slots when date is selected
+    document.getElementById('booking-date').addEventListener('change', function() {
+      const timeSlotsGroup = document.getElementById('time-slots-group');
+      if (this.value) {
+        timeSlotsGroup.style.display = 'block';
+        timeSlotsGroup.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        timeSlotsGroup.style.display = 'none';
+      }
+    });
+
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('booking-date').setAttribute('min', today);
+  });
+</script>
